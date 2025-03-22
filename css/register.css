@@ -1,0 +1,117 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #05505a; /* Background color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form container */
+.container {
+    background: #afdde5;
+    padding: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 600px; /* Adjusted width for better layout */
+}
+
+/* Form heading */
+h2 {
+    text-align: center;
+    color: #05505a;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Form grid layout */
+.form-group {
+    display: flex;
+    gap: 20px; /* Space between two fields */
+    margin-bottom: 15px;
+}
+
+/* Each input container */
+.input-box {
+    flex: 1; /* Ensures equal width */
+    display: flex;
+    flex-direction: column;
+    margin-right:30px;
+}
+
+/* Label styling */
+label {
+    font-weight: bold;
+    color: #05505a;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Input, select, textarea styling */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f8f9fa;
+    outline: none;
+    font-size: 14px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  
+}
+
+/* Special styling for textarea */
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #05505a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #033f45;
+}
+
+/* Confirmation Message */
+#confirmationMessage {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+}
+.error-message {
+    font-size: 12px;
+    color: red;
+    margin-top: 3px;
+    display: block;
+}
+
+
+/* Responsive Design: Stack fields on smaller screens */
+@media (max-width: 600px) {
+    .form-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

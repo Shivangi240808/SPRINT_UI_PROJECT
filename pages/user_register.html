@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>User Registration</h2>
+        <form id="registrationForm">
+            <!-- First Row -->
+            <div class="form-group">
+                <div class="input-box">
+                    <label for="consumerNumber">Consumer Number</label>
+                    <input type="text" id="consumerNumber">
+                    <span class="error-message"></span>
+                </div>
+                <div class="input-box">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName">
+                    <span class="error-message"></span>
+                </div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="form-group">
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                    <span class="error-message"></span>
+                </div>
+                <div class="input-box">
+                    <label for="mobileNumber">Mobile Number</label>
+                    <input type="text" id="mobileNumber" >
+                    <span class="error-message"></span>
+                </div>
+            </div>
+
+            <!-- Third Row -->
+            <div class="form-group">
+                <div class="input-box">
+                    <label for="customerType">Customer Type</label>
+                    <select id="customerType">
+                        <option>Select</option>
+                        <option value="Residential">Residential</option>
+                        <option value="Commercial">Commercial</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label for="electricalSection">Electrical Section</label>
+                    <select id="electricalSection" value="">
+                        <option>Select</option>
+                        <option value="Office">Office</option>
+                        <option value="Region">Region</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Fourth Row -->
+            <div class="form-group">
+                <div class="input-box">
+                    <label for="userId">User ID</label>
+                    <input type="text" id="userId" >
+                    <span class="error-message"></span>
+                </div>
+                <div class="input-box">
+                    <label for="password">Password</label>
+                    <input type="password" id="password">
+                    <span class="error-message"></span>
+                </div>
+            </div>
+
+            <!-- Fifth Row -->
+            <div class="form-group">
+                <div class="input-box">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword">
+                    <span class="error-message"></span>
+                </div>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <!-- Confirmation Message -->
+        <div id="confirmationMessage"></div>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>
