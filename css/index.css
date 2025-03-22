@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+:root{
+    --primaryColor:#05505a;
+    --secondaryColor:#afdde5;
+    --tertiaryColor:rgba(255, 255, 255, 0.2);
+
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+.navbar {
+    background-color: var(--primaryColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:6px 20px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 3rem;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+ 
+}
+
+.nav-links a:hover {
+    background-color: var(--tertiaryColor);
+    
+}
+
+/* Hamburger Menu for Mobile */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.profile_container{
+   position: relative;   
+   display: inline-block;
+   cursor: pointer;
+   padding: 0.2rem;
+   display: flex;
+   align-items: center;
+   height: 50%;
+   width: 3rem;
+   
+   margin-right: 2rem;
+}
+.drop_down_menu{
+    position: absolute;
+    padding: 0.5rem 1rem;
+    right: 0.5rem;
+    width: 10rem;
+    top: 2rem;
+    border-radius: 0.5rem;
+    display: none;
+    background-color: var(--secondaryColor);
+}
+.drop_down_menu i{
+    font-size: 1.2rem;
+}
+
+.drop_down_menu a{
+    text-decoration: none;
+    color: #000;
+    margin: 1rem 0;
+}
+
+.profile_container:hover .drop_down_menu{
+    display: block;
+}
+.signup{
+    background-color: var(--tertiaryColor);
+    padding:6.5px 2px;
+    border-radius: 0.2rem;
+}
+/* ---------------(main_container)--------------------------------- */
+
+.main_container{
+    height: 77vh;
+}
+
+.footer{
+    background-color: var(--primaryColor);
+    height: 3rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+/* ----------------------------------------------()-------------------------------------------- */
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #05505a;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* Welcome Message */
+.welcome {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 20px;
+    color: #05505a;
+}
+
+/* Bill Summary */
+.bill-summary {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.bill-summary button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.bill-summary button:hover {
+    background-color: #d94a38;
+}

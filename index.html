@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Billing Dashboard</div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="#">View Bills</a></li>
+            <li><a href="#">Pay Bill</a></li>
+            <li><a href="#">Bill History</a></li>
+            <li><a href="#">Register Complaint</a></li>
+            <li><a href="#">Complaint Status</a></li>
+            <li class="signup"><a href="#">Signup</a></li>
+            <li class="profile_container">
+                <i class="fa-regular fa-user"></i>
+               <div class="drop_down_menu">
+                
+                <a href="#"><i class="fa-solid fa-gear"></i>Account Setting</a>
+                 <br> <br> <hr>
+                <a href="#" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+            
+               </div>
+            </li>
+        </ul>
+        
+    </nav>
+
+   <main class="main_container">
+            <!-- Welcome Message -->
+            <div class="welcome">
+                Welcome, <b>John Doe</b>! (Account: 123456789)
+                <br>Billing Address: 123 Main Street, City, Country
+            </div>
+
+            <!-- Bill Summary -->
+            <div class="bill-summary">
+                <h3>Current Bill Summary</h3>
+                <p><b>Billing Period:</b> March 2024</p>
+                <p><b>Due Date:</b> 25th March 2024</p>
+                <p><b>Amount Due:</b> $120.50</p>
+                <button onclick="payNow()">Pay Now</button>
+            </div>
+   </main>
+    <footer class="footer">
+        <p>Copyright &copy; 2025. All rights reserved</p>
+
+    </footer>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
