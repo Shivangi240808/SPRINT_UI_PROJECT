@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+:root{
+    --primaryColor:#05505a;
+    --secondaryColor:#afdde5;
+    --tertiaryColor:rgba(255, 255, 255, 0.2);
+} 
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.heading{
+margin-top: 20px;
+margin-bottom: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: var(--primaryColor);
+    color: white;
+}
+.total {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 20px; 
+    height: 15vh;
+}
+.total-amount{
+    width: 280px;
+}
+.pay-btn{
+   text-align: end;
+   align-items: flex-end; 
+}
+.pages{
+    text-align: center;
+    border-radius: 50%;
+}
+.pages-btn{
+    margin-top: 8px;
+    padding: 10px 20px;
+    background-color: var(--primaryColor);
+    color: white;
+    border-radius: 10%;
+    border: none;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.bill-checkbox{
+    cursor: pointer;
+}

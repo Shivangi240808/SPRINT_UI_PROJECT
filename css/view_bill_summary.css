@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #05505a;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #05505a;
+    color: white;
+}
+
+/* Payment Section */
+.payment-section {
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #05505a;
+    color: white;
+}
+
+.btn-primary:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Error Message */
+.error {
+    display: none;
+    background-color: #ffdddd;
+    color: red;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px;
+}

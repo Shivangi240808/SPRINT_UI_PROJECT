@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/pay_bill.css">
+    <title>Card Payment</title>
+</head>
+<body>
+
+    <div class="navbar">Secure Card Payment</div>
+
+    <div class="container">
+        <h3>Enter Card Details</h3>
+        <p class="total-amount">Total Amount: $<span id="total-amount">120.50</span></p>
+
+        <label>Card Number</label>
+        <input type="text" id="card-number" maxlength="16" placeholder="Enter 16-digit card number">
+        <p class="error" id="card-error">Invalid card number (Must be 16 digits)</p>
+
+        <label>Expiry Date</label>
+        <input type="month" id="expiry-date">
+        <p class="error" id="expiry-error">Card is expired</p>
+
+        <label>CVV</label>
+        <input type="text" id="cvv" maxlength="4" placeholder="3 or 4-digit CVV">
+        <p class="error" id="cvv-error">Invalid CVV</p>
+
+        <label>Cardholder Name</label>
+        <input type="text" id="cardholder-name" placeholder="Enter Name">
+        <p class="error" id="name-error">Name cannot be empty</p>
+
+        <button class="btn btn-primary" onclick="confirmPayment()">Proceed to Payment</button>
+        <button class="btn btn-secondary" onclick="goBack()">Back</button>
+
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="container hidden" id="confirmation-modal">
+        <h3>Confirm Payment</h3>
+        <p>Amount: $<span id="confirm-amount"></span></p>
+        <p>Card Number: **** **** **** <span id="confirm-card"></span></p>
+        <button class="btn btn-primary" onclick="processPayment()">Confirm</button>
+        <button class="btn btn-secondary" onclick="cancelPayment()">Cancel</button>
+    </div>
+
+    <!-- Success Message -->
+    <div class="container success hidden" id="success-message">
+        <h3>Payment Successful</h3>
+        <p><b>Payment ID:</b> P123456789</p>
+        <p><b>Transaction ID:</b> T987654321</p>
+        <p><b>Receipt No:</b> R567890</p>
+        <p><b>Date:</b> <span id="transaction-date"></span></p>
+        <p><b>Transaction Type:</b> Credit</p>
+        <p><b>Bill Number:</b> B20240301</p>
+        <p><b>Amount Paid:</b> $<span id="paid-amount"></span></p>
+        <p><b>Status:</b> Successful</p>
+        <button class="btn btn-primary" onclick="downloadReceipt()">Download Receipt</button>
+        <button class="btn btn-secondary" onclick="window.location.href='dashboard.html'">Return to Dashboard</button>
+    </div>
+
+    <script  src="/js/pay_bill.js"> </script>
+
+
+</body>
+</html>
