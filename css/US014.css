@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5; /* Tertiary color */
+    color: #05505a; /* Primary color */
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #05505a; /* Primary color */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea, select {
+    padding: 10px;
+    border: 1px solid #afdde5; /* Secondary color */
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[readonly] {
+    background-color: #f5f5f5; /* Tertiary color */
+    cursor: not-allowed;
+}
+
+button {
+    padding: 10px;
+    background-color: #05505a; /* Primary color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #afdde5; /* Secondary color */
+    color: #05505a;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #afdde5; /* Secondary color */
+}
+
+th {
+    background-color: #05505a; /* Primary color */
+    color: #fff;
+}
+
+td button {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.message.success {
+    background-color: #afdde5; /* Secondary color */
+    color: #05505a;
+}
+
+.message.error {
+    background-color: #ffcccc;
+    color: #cc0000;
+}

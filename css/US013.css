@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #05505a;
+    text-align: center;
+}
+
+.filters {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+select {
+    padding: 8px;
+    border: 1px solid #afdde5;
+    border-radius: 4px;
+    background-color: #afdde5;
+    color: #05505a;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #afdde5;
+}
+
+th {
+    background-color: #05505a;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+tr:hover {
+    background-color: #afdde5;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #05505a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #afdde5;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #033d45;
+}
