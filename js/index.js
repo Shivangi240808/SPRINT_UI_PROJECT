@@ -14,7 +14,10 @@ function payNow() {
 
 
 let welcomDiv=document.querySelector(".welcome_div");
-welcomDiv.style.display="none"
+welcomDiv.style.display="none";
+
+let userName=document.getElementById('userName');
+let userIcon=document.getElementById('userIcon');
 
 let loginDiv=document.querySelector(".login_div");
 
@@ -29,8 +32,8 @@ navLinks.style.display="none";
 let errorMessage=document.getElementById('errorMessage')
 
 
-let storedEmails=localStorage.getItem("emailList")
-let emailArray=(storedEmails)?JSON.parse(storedEmails):[];
+let storedUsers=localStorage.getItem("users")
+let userArray=(storedUsers)?JSON.parse(storedUsers):[];
 
 
 //------------------(login_function)----------------------
@@ -42,11 +45,14 @@ function loginUser(event){
 
     localStorage.setItem("email",emailValue);
     localStorage.setItem("password",passwordValue);
-
+    
     
 
-    emailArray!=[]&&emailArray.forEach(email => {
-        if(localStorage.getItem("email")==email){
+    userArray!=[]&&userArray.forEach(user => {
+        if(localStorage.getItem("email")==user.email&&localStorage.getItem("password")==user.password){
+            localStorage.setItem("userName",user.fullName);
+            userName.textContent=localStorage.getItem("userName");
+            userIcon.innerHTML=`<p style="margin-left:1rem;">${localStorage.getItem("userName")}</p>`
             setTimeout(()=>{
                 navLinks.style.display="flex";
                 loginDiv.style.display="none"
@@ -70,6 +76,8 @@ function loginUser(event){
 function logout() {
 
     localStorage.setItem("email","");
+    localStorage.setItem("password","");
+    localStorage.setItem("userName","");
     window.location.reload();
 
 }
@@ -77,11 +85,13 @@ function logout() {
 //---------------------(onload_function)--------------------------
 
 function onLoad(){
-    emailArray!=[]&&emailArray.forEach(email => {
-        if(localStorage.getItem("email")==email){
+    userArray!=[]&&userArray.forEach(user => {
+        if(localStorage.getItem("email")==user.email){
             navLinks.style.display="flex";
             loginDiv.style.display="none"
-            welcomDiv.style.display="unset"
+            welcomDiv.style.display="unset";
+             userName.textContent=localStorage.getItem("userName");
+            userIcon.innerHTML=`<p style="margin-left:1rem;">${localStorage.getItem("userName")}</p>`
         }
     });
     

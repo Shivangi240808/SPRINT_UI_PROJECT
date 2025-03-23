@@ -134,13 +134,18 @@ document.addEventListener("DOMContentLoaded", function () {
                                              <b>Name:</b> ${fullName} <br> 
                                              <b>Email:</b> ${email}`;
 
-            let storedEmails=localStorage.getItem("emailList");
+            let storedUserInfo=localStorage.getItem("users");
 
-            let newArray=(storedEmails)?JSON.parse(storedEmails):[];
+            let userArray=(storedUserInfo)?JSON.parse(storedUserInfo):[];
 
-            newArray.push(email);
+            let existingUser=userArray.find(user=> user.email===email);
+            if(existingUser){
+                confirmationMessage.innerHTML=`<p>User Already exists !! Please try to login</p>`
+                return
+            }
+            userArray.push({email:email,password:password,fullName:fullName});
             
-            localStorage.setItem("emailList",JSON.stringify(newArray))
+            localStorage.setItem("users",JSON.stringify(userArray))
                                           
             form.reset();
             let redirect=setTimeout(()=>{
