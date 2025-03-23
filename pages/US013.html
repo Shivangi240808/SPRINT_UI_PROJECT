@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumer List - Electricity Management</title>
+    <link rel="stylesheet" href="US013.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Consumer List</h1>
+        <div class="filters">
+            <select id="electricalSection" onchange="filterConsumers()">
+                <option value="">All Offices/Regions</option>
+                <option value="Office">Office</option>
+                <option value="Region">Region</option>
+            </select>
+            <select id="customerType" onchange="filterConsumers()">
+                <option value="">All Customer Types</option>
+                <option value="Residential">Residential</option>
+                <option value="Commercial">Commercial</option>
+            </select>
+        </div>
+        <table id="consumerTable">
+            <thead>
+                <tr>
+                    <th>Consumer ID</th>
+                    <th>Name</th>
+                    <th>Office/Region</th>
+                    <th>Customer Type</th>
+                </tr>
+            </thead>
+            <tbody id="consumerTableBody"></tbody>
+        </table>
+        <div class="pagination">
+            <button id="prevBtn" onclick="changePage(-1)">Previous</button>
+            <span id="pageInfo"></span>
+            <button id="nextBtn" onclick="changePage(1)">Next</button>
+        </div>
+    </div>
+    <script src="US013.js"></script>
+</body>
+</html>
