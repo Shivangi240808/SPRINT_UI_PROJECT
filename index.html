@@ -6,20 +6,21 @@
     <title>Responsive Navbar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/index.css">
+    
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">Billing Dashboard</div>
+    <nav class="navbar" >
+        <div class="logo">EnergiX</div>
         <div class="menu-icon" onclick="toggleMenu()">☰</div>
-        <ul class="nav-links">
+        <ul class="nav-links" >
             <li><a href="/pages/view_bills.html">View Bills</a></li>
             <li><a href="#">Pay Bill</a></li>
             <li><a href="#">Bill History</a></li>
             <li><a href="#">Register Complaint</a></li>
             <li><a href="#">Complaint Status</a></li>
-            <li class="signup"><a href="#">Signup</a></li>
+            <!-- <li class="signup"><a href="/pages/user_register.html">Signup</a></li> -->
             <li class="profile_container">
                 <i class="fa-regular fa-user"></i>
                <div class="drop_down_menu">
@@ -34,21 +35,69 @@
         
     </nav>
 
-   <main class="main_container">
-            <!-- Welcome Message -->
-            <div class="welcome">
-                Welcome, <b>John Doe</b>! (Account: 123456789)
+   <main class="main_container" >
+           <div class="welcome_div"  >
+    <!--------------- Welcome Message -------------->
+             <div class="welcome">
+                Welcome, <b class="userName">John Doe</b>! (Account: 123456789)
                 <br>Billing Address: 123 Main Street, City, Country
             </div>
 
             <!-- Bill Summary -->
             <div class="bill-summary">
-                <h3>Current Bill Summary</h3>
+                <h3 >Current Bill Summary</h3>
                 <p><b>Billing Period:</b> March 2024</p>
                 <p><b>Due Date:</b> 25th March 2024</p>
                 <p><b>Amount Due:</b> $120.50</p>
                 <button onclick="payNow()">Pay Now</button>
             </div>
+           </div>
+
+    <!-- -------------------(Login_div)--------------------- -->
+
+           <div class="login_div">
+            <div class="container">
+                <h2>Login here...</h2> <br>
+                <form id="registrationForm">
+                    
+                    <div class="form-group">
+                        <div class="input-box">
+                            <label for="email">Email</label>
+                            <input type="email" id="email">
+                            <span class="error-message"></span>
+                        </div>
+                        
+                    </div>
+        
+                    <div class="form-group">
+                        
+                        <div class="input-box">
+                            <label for="password">Password</label>
+                            <input type="password" id="password">
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+        
+                    <!-- Fifth Row -->
+                    <!-- <div class="form-group">
+                        <div class="input-box">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword">
+                            <span class="error-message"></span>
+                        </div>
+                    </div> -->
+        
+                    <button  onclick="loginUser(event)">Login</button>
+                </form>
+                
+                <!-- Confirmation Message -->
+                <div id="errorMessage" style="color: red;"></div> <br>
+                <div class="signup">
+                    <p>Don't have an account?</p> <br>
+                     <p><a href="/pages/user_register.html">Signup</a></p>
+                </div>
+            </div>
+           </div>
    </main>
     <footer class="footer">
         <p>Copyright &copy; 2025. All rights reserved</p>

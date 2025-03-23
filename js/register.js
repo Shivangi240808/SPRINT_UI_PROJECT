@@ -133,8 +133,19 @@ document.addEventListener("DOMContentLoaded", function () {
                                              <b>Customer ID:</b> ${customerId} <br> 
                                              <b>Name:</b> ${fullName} <br> 
                                              <b>Email:</b> ${email}`;
-                                           
+
+            let storedEmails=localStorage.getItem("emailList");
+
+            let newArray=(storedEmails)?JSON.parse(storedEmails):[];
+
+            newArray.push(email);
+            
+            localStorage.setItem("emailList",JSON.stringify(newArray))
+                                          
             form.reset();
+            let redirect=setTimeout(()=>{
+                window.history.back();
+            },1500)
         }
     });
 });

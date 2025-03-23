@@ -25,6 +25,7 @@ body {
     padding:6px 20px;
     color: white;
     flex-wrap: wrap;
+    min-height: 3rem;
 }
 
 .logo {
@@ -120,9 +121,84 @@ body {
     align-items: center;
     padding: 1rem;
 }
+
+
+/* -----------------------(for login form)---------------------- */
+
+.login_div{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.container {
+    background: #afdde5;
+    padding: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 480px; /* Adjusted width for better layout */
+}
+label {
+    font-weight: bold;
+    color: #05505a;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Input, select, textarea styling */
+input, select, textarea {
+    width: 96%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f8f9fa;
+    outline: none;
+    font-size: 14px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #05505a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #033f45;
+}
+
+
+
+
+.signup p a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #fff;
+    padding: 0.4rem;
+    border-radius: 4px;
+    background-color: var(--primaryColor);
+
+
+}
+
+
+
+
+
+
 /* ----------------------------------------------()-------------------------------------------- */
 /* Responsive Design */
 @media (max-width: 768px) {
+
     .nav-links {
         display: none;
         flex-direction: column;
